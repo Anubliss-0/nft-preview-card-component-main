@@ -1,0 +1,164 @@
+/*utility classes and CSS variables */
+.flex {
+  display: flex;
+}
+
+.w300 {
+  font-weight: 300;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w600 {
+  font-weight: 600;
+}
+
+.white {
+  color: var(--white);
+}
+
+.linecolor {
+  color: var(--linecolor);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.softblue {
+  color: var(--softblue);
+}
+
+.hide {
+  opacity: 0;
+  transition: linear 0.25s;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  --mainbg: hsl(217, 54%, 11%);
+  --cardbg: hsl(216, 50%, 16%);
+  --white: hsl(0, 0%, 100%);
+  --linecolor: hsl(215, 32%, 27%);
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  background-color: var(--mainbg);
+  overflow: hidden;
+  font-size: 18px;
+}
+
+a:hover {
+  color: var(--cyan);
+  transition: linear 0.25s;
+}
+
+a {
+  color: inherit;
+  transition: linear 0.25s;
+  text-decoration: none;
+}
+
+/*styles*/
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  flex: 0 1 350px;
+  flex-direction: column;
+  background-color: var(--cardbg);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 15px;
+}
+
+.container {
+  width: calc(100% - 13.69%);
+  align-self: center;
+  margin-top: 24px;
+  position: relative;
+  background: #00fff8;
+  border-radius: 8px;
+  
+}
+
+.container svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*hack to center absolute within container*/
+  transform: translate(-50%, -50%);
+}
+
+.container img:hover {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 8px;
+  transition: linear 0.25s;
+}
+
+.container img:hover + .hide {
+  opacity: 1;
+  transition: linear 0.25s;
+}
+
+.container > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: linear 0.25s;
+}
+
+h1 {
+  margin: 6.89% 24px 16px 24px;
+  font-size: 22px;
+}
+
+h1 + span {
+  margin: 0 6.89%;
+  color: var(--softblue);
+}
+
+.price-time {
+  justify-content: space-between;
+  margin: 6.845% 6.845%;
+  align-items: center;
+}
+
+.eth {
+  align-items: center;
+}
+
+.timeleft {
+  align-items: center;
+}
+
+.price-time svg {
+  padding-right: 6.48px;
+}
+
+hr {
+  width: calc(100% - 13.69%);
+  border: var(--linecolor) 1px solid;
+  margin: 0% auto;
+}
+
+.creator {
+  width: calc(100% - 13.69%);
+  align-self: center;
+  margin: 16px 0 32px 0;
+  align-items: center;
+}
+
+.creator img {
+  height: 2.063em;
+  border: solid 1px var(--white);
+  border-radius: 50%;
+  margin-right: 16px;
+}
